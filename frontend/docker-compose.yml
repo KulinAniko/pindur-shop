@@ -1,0 +1,10 @@
+version: '3'
+services:
+  your-service:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    image: demo-frontend
+    ports:
+      - "4200:80"
+
