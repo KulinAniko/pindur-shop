@@ -21,38 +21,44 @@
     </properties>
 
     <dependencies>
-    <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-data-jpa</artifactId>
-    </dependency>
+        <!--JPA (Java Persistence API) adatbázis-kezelési támogatás-->
+       <dependency>
+       <groupId>org.springframework.boot</groupId>
+       <artifactId>spring-boot-starter-data-jpa</artifactId>
+   </dependency>
 
-    <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-validation</artifactId>
-    </dependency>
+   <dependency>
+       <groupId>org.springframework.boot</groupId>
+       <artifactId>spring-boot-starter-validation</artifactId>
+   </dependency>
 
+       <!-- Spring MVC (Model-View-Controller) keretrendszer beállításait tartalmazza-->
     <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
 
+        <!--  H2 adatbázis-->
     <dependency>
         <groupId>com.h2database</groupId>
         <artifactId>h2</artifactId>
         <scope>runtime</scope>
     </dependency>
 
+        <!-- MySQL adatbázishoz való kapcsolat létrehozását lehetővé tevő JDBC (Java Database Connectivity) vezérlő.-->
     <dependency>
         <groupId>mysql</groupId>
         <artifactId>mysql-connector-java</artifactId>
     </dependency>
 
+        <!-- Lombok  a boilerplate kód csökkentése-->
     <dependency>
         <groupId>org.projectlombok</groupId>
         <artifactId>lombok</artifactId>
         <optional>true</optional>
     </dependency>
 
+        <!-- Modelmapper Java könyvtár, amely az objektumok közötti átjáráshoz-->
     <dependency>
         <groupId>org.modelmapper</groupId>
         <artifactId>modelmapper</artifactId>
