@@ -6,6 +6,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -15,6 +16,7 @@ import java.io.UnsupportedEncodingException;
 @RequestMapping("/api/appusers")
 @Slf4j
 public class AppUserController {
+
     private final AppUserService appUserService;
 
     @Autowired
@@ -31,6 +33,7 @@ public class AppUserController {
     }
 
     @PutMapping("/updateAppUser/{appuserId}")
+    @Secured("ROLE_USER")
     public ResponseEntity<AppUserInfo> updateAppUserByIdAsUser(@PathVariable("appuserId") Long id, @Valid @RequestBody AppUserUpdateCommand command)  {
         log.info("Http request, PUT /api/users/{appuserId} body: " + command.toString() + " with variable: " + id);
         AppUserInfo appUserInfo = appUserService.updateAppUserByIdAsUser(id, command);
