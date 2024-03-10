@@ -3,6 +3,7 @@ package hu.pindur.backend.service;
 import hu.pindur.backend.domain.AppUser;
 import hu.pindur.backend.dto.AppUserCreateCommand;
 import hu.pindur.backend.dto.AppUserInfo;
+import hu.pindur.backend.dto.AppUserUpdateCommand;
 import hu.pindur.backend.repository.AppUserRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +11,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
+import java.util.Optional;
 
 @Service
 @Transactional
@@ -35,4 +37,22 @@ public class AppUserService {
         appUserRepository.save(appUser);
         return modelMapper.map(appUser, AppUserInfo.class);
     }
+
+    public AppUserInfo updateAppUserByIdAsUser(Long id, AppUserUpdateCommand command) {
+        AppUser appUser = findUserById(id);
+        modelMapper.map(command, appUser);
+        appUserRepository.save(appUser);
+        return modelMapper.map(appUser, AppUserInfo.class);
+
+    }
+
+    private AppUser findUserById(Long id) {
+        Optional<AppUser> optionalAppUser = appUserRepository.findById(id);
+        if (optionalAppUser.isEmpty()) {
+//            throw new UserNotFoundException(id);
+        }
+        return optionalAppUser.get();
+    }
+
+
 }

@@ -1,16 +1,12 @@
 package hu.pindur.backend.controller;
 
-import hu.pindur.backend.dto.AppUserCreateCommand;
-import hu.pindur.backend.dto.AppUserInfo;
+import hu.pindur.backend.dto.*;
 import hu.pindur.backend.service.AppUserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.io.UnsupportedEncodingException;
@@ -33,6 +29,16 @@ public class AppUserController {
         AppUserInfo appUserInfo = appUserService.saveAppUser(command);
         return new ResponseEntity<>(appUserInfo, HttpStatus.OK);
     }
+
+    @PutMapping("/updateAppUser/{appuserId}")
+    public ResponseEntity<AppUserInfo> updateAppUserByIdAsUser(@PathVariable("appuserId") Long id, @Valid @RequestBody AppUserUpdateCommand command)  {
+        log.info("Http request, PUT /api/users/{appuserId} body: " + command.toString() + " with variable: " + id);
+        AppUserInfo appUserInfo = appUserService.updateAppUserByIdAsUser(id, command);
+        return new ResponseEntity<>(appUserInfo, HttpStatus.OK);
+    }
+
+
+
 
 
 }
