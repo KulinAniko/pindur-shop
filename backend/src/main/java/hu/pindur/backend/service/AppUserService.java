@@ -7,6 +7,8 @@ import com.auth0.jwt.interfaces.DecodedJWT;
 import hu.pindur.backend.domain.AppUser;
 import hu.pindur.backend.domain.UserRole;
 import hu.pindur.backend.dto.*;
+import hu.pindur.backend.exceptionhandling.EmailNotFoundException;
+import hu.pindur.backend.exceptionhandling.UserNotFoundException;
 import hu.pindur.backend.repository.AppUserRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -79,7 +81,7 @@ public class AppUserService implements UserDetailsService {
     private AppUser findUserById(Long id) {
         Optional<AppUser> optionalAppUser = appUserRepository.findById(id);
         if (optionalAppUser.isEmpty()) {
-//            throw new UserNotFoundException(id);
+            throw new UserNotFoundException(id);
         }
         return optionalAppUser.get();
     }
@@ -103,7 +105,7 @@ public class AppUserService implements UserDetailsService {
     public AppUser findUserByEmail(String email) {
         Optional<AppUser> optionalAppUser = appUserRepository.findByEmail(email);
         if (optionalAppUser.isEmpty()) {
-//            throw new UserEmailNotFoundException(email);
+            throw new EmailNotFoundException(email);
         }
         return optionalAppUser.get();
     }

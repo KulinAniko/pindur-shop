@@ -25,17 +25,17 @@ public class AppUserController {
     }
 
 
-    @PostMapping("/saveAppUser")
+    @PostMapping("/profile/saveAppUser")
     public ResponseEntity<AppUserInfo> saveAppUser(@Valid @RequestBody AppUserCreateCommand command)  {
-        log.info("Http request, POST / /api/users/saveAppUser");
+        log.info("Http request, POST / /api/appusers/profile/saveAppUser");
         AppUserInfo appUserInfo = appUserService.saveAppUser(command);
         return new ResponseEntity<>(appUserInfo, HttpStatus.OK);
     }
 
-    @PutMapping("/updateAppUser/{appuserId}")
-    @Secured("ROLE_USER")
+    @PutMapping("/profile/updateAppUser/{appuserId}")
+    @Secured({"ROLE_ADMIN", "ROLE_USER"})
     public ResponseEntity<AppUserInfo> updateAppUserByIdAsUser(@PathVariable("appuserId") Long id, @Valid @RequestBody AppUserUpdateCommand command)  {
-        log.info("Http request, PUT /api/users/{appuserId} body: " + command.toString() + " with variable: " + id);
+        log.info("Http request, PUT / /api/appusers/profile/updateAppUser/{appuserId} body: " + command.toString() + " with variable: " + id);
         AppUserInfo appUserInfo = appUserService.updateAppUserByIdAsUser(id, command);
         return new ResponseEntity<>(appUserInfo, HttpStatus.OK);
     }

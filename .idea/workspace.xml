@@ -4,24 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f698d1e8-917a-4b95-8a50-b3f1997bf53a" name="Changes" comment="save &amp; update">
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/hu/pindur/backend/config/MethodSecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/hu/pindur/backend/config/SecurityBeanConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/hu/pindur/backend/config/SecurityConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/hu/pindur/backend/config/SpringWebConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/hu/pindur/backend/dto/AuthenticatedUserInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/hu/pindur/backend/dto/AuthenticationRequestDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/hu/pindur/backend/dto/AuthenticationResponseDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/hu/pindur/backend/dto/RefreshTokenRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/hu/pindur/backend/dto/RefreshTokenResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/hu/pindur/backend/filter/CustomAuthorizationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/hu/pindur/backend/service/PasswordValidator.java" afterDir="false" />
+    <list default="true" id="f698d1e8-917a-4b95-8a50-b3f1997bf53a" name="Changes" comment="domains">
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/hu/pindur/backend/exceptionhandling/CartIsNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/hu/pindur/backend/exceptionhandling/CartItemNotExistsException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/hu/pindur/backend/exceptionhandling/CartisEmptyException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/hu/pindur/backend/exceptionhandling/CloudinaryDownloadException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/hu/pindur/backend/exceptionhandling/CloudinaryUploadException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/hu/pindur/backend/exceptionhandling/CouponIsNotFound.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/hu/pindur/backend/exceptionhandling/EmailAlreadyExistException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/hu/pindur/backend/exceptionhandling/EmailNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/hu/pindur/backend/exceptionhandling/FeedbackNotFoundByAppUserException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/hu/pindur/backend/exceptionhandling/FeedbackNotFoundByIdException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/hu/pindur/backend/exceptionhandling/FeedbackNotFoundByProductIdException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/hu/pindur/backend/exceptionhandling/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/hu/pindur/backend/exceptionhandling/NoFeedbackAllowedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/hu/pindur/backend/exceptionhandling/OrderCannotBeDeletedNow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/hu/pindur/backend/exceptionhandling/OrderIsNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/hu/pindur/backend/exceptionhandling/OrderItemNotFoundByIdException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/hu/pindur/backend/exceptionhandling/OutOfThisProductException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/hu/pindur/backend/exceptionhandling/PriceFilterIsNotValidException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/hu/pindur/backend/exceptionhandling/ProductNotFoundByIdException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/hu/pindur/backend/exceptionhandling/ServerStorageDownloadException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/hu/pindur/backend/exceptionhandling/ThereIsNoRoleAssignedToUserException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/hu/pindur/backend/exceptionhandling/UserNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/hu/pindur/backend/exceptionhandling/ValidationError.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/hu/pindur/backend/controller/AppUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/hu/pindur/backend/controller/AppUserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/hu/pindur/backend/repository/AppUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/hu/pindur/backend/repository/AppUserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/hu/pindur/backend/service/AppUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/hu/pindur/backend/service/AppUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +49,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="AppUser-save/update/find/delete" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -65,9 +75,9 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "security",
+    "git-widget-placeholder": "Exception",
     "jdk.selected.JAVA_MODULE": "11",
-    "last_opened_file_path": "C:/Users/Y580-Proba/IdeaProjects/pindur-shop/backend/src/main/java/hu/pindur/backend/dto",
+    "last_opened_file_path": "C:/Users/Y580-Proba/IdeaProjects/pindur-shop",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -86,18 +96,12 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
-      <recent name="hu.pindur.backend.dto" />
       <recent name="hu.pindur.backend.domain" />
       <recent name="hu.pindur.backend.repository" />
       <recent name="hu.pindur.backend.service" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Y580-Proba\IdeaProjects\pindur-shop\backend\src\main\java\hu\pindur\backend\dto" />
-      <recent name="C:\Users\Y580-Proba\IdeaProjects\pindur-shop\backend\src\main\java\hu\pindur\backend" />
       <recent name="C:\Users\Y580-Proba\IdeaProjects\pindur-shop" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="hu.pindur.backend.service" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.BackendApplication">
@@ -139,8 +143,6 @@
         <item itemvalue="Spring Boot.BackendApplication" />
         <item itemvalue="npm.start" />
         <item itemvalue="npm.ng" />
-        <item itemvalue="Spring Boot.BackendApplication" />
-        <item itemvalue="npm.start" />
       </list>
     </recent_temporary>
   </component>
@@ -165,15 +167,7 @@
       <option name="project" value="LOCAL" />
       <updated>1709569340912</updated>
     </task>
-    <task id="LOCAL-00002" summary="save &amp; update">
-      <option name="closed" value="true" />
-      <created>1710079691308</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1710079691308</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -193,7 +187,6 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="structure" />
     <MESSAGE value="domains" />
-    <MESSAGE value="save &amp; update" />
-    <option name="LAST_COMMIT_MESSAGE" value="save &amp; update" />
+    <option name="LAST_COMMIT_MESSAGE" value="domains" />
   </component>
 </project>
